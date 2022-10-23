@@ -1,0 +1,31 @@
+https://parceljs.org/getting-started/webapp/
+
+1. В пустой папке установил npm install --save-dev parcel
+
+2. Создал файл .gitignore и добавил в него node_modules/
+
+3. Создал папку srs и в ней файл index.html. Там поместил разметку стартовой страницы
+
+4. Указал точку входа в проект npx parcel src/index.html
+
+5. Создал в папке srs файл styles.css. Там поместил стили
+
+6. Создал в папке srs файл app.js. Там поместил скрипт
+
+7. В файле index.html в шапке подключил:
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="app.js"></script>
+
+8. В файле package.json написал:
+{
+  "name": "my-project",
+  "source": "src/index.html",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "devDependencies": {
+    "parcel": "^2.7.0"
+  }
+}
